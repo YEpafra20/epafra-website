@@ -1,0 +1,86 @@
+@media (max-width: 680px) {
+  .hero {
+    overflow: hidden;
+  }
+
+  .cert-grid,
+  .cert-rail {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .cert-rail {
+    margin-inline: 0;
+  }
+}
+
+.cert-grid {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.cert-rail {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 12px 0 25px;
+}
+
+.cert-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  animation: certification-scroll 52s linear infinite;
+  will-change: transform;
+}
+
+.cert-track:hover {
+  animation-play-state: paused;
+}
+
+.cert-mark {
+  position: relative;
+  overflow: hidden;
+  width: 96px;
+  height: 52px;
+  flex: 0 0 96px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cert-card .cert-mark {
+  flex: 0 0 96px;
+}
+
+.cert-logo-text {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  font-family: 'Space Grotesk';
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+.cert-mark img {
+  position: relative;
+  z-index: 1;
+  width: 86px;
+  height: 44px;
+  object-fit: contain;
+}
+
+@keyframes certification-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 8px)); }
+}
+
+@media (max-width: 680px) {
+  .cert-card { width: 270px; flex: 0 0 270px; }
+}

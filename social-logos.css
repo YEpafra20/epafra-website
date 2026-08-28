@@ -1,0 +1,10 @@
+.social-row .brand-link img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.social-row .brand-link:last-child img {
+  width: 20px;
+  height: 16px;
+}
